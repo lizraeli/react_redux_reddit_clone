@@ -31,17 +31,9 @@ const defaultState = [
 
 export default (state = defaultState, action) => {
   switch (action.type) {
-    case "GET_ONE":
-      let theOne = state.allMemes.filter(meme => meme.id === action.id);
+    case "SET_MEMES":
+      return action.memes;
 
-      if (theOne[0]) {
-        return {
-          allMemes: state.allMemes,
-          oneMeme: theOne[0]
-        };
-      } else {
-        return state;
-      }
     default:
       return state;
   }

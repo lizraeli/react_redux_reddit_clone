@@ -16,7 +16,7 @@ const Links = ({ links, getSingleLink }) => {
     const singleLink = links.find(link => link.id === id)
 
     return (
-      <SingleLink links={links} singleLink={singleLink} id={id} />
+      <SingleLink singleLink={singleLink} id={id} />
     )
   }
 

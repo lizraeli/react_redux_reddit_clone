@@ -34,7 +34,16 @@ export default (state = defaultState, action) => {
     case "SET_LINKS":
       return action.links;
     case "ADD_LINK":
-      return [...state, action.link];
+      // action.url, action.title, action.id
+      // const {id, title, url} = action
+      return [
+        ...state, action.link
+        // {
+        //   id: action.id,
+        //   title: action.title,
+        //   url: action.url
+        // }
+      ];
     default:
       return state;
   }

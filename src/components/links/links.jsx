@@ -3,17 +3,20 @@ import { Route, Link, Switch } from 'react-router-dom';
 import LinkList from './linklist';
 import SingleLink from './singlelink';
 
-const Links = ({ state, getAllLinks, getSingleLink }) => {
+const Links = ({ links, getSingleLink }) => {
   const renderLinkList = () => {
     return (
-      <LinkList state={state} getAllLinks={getAllLinks} />
+      <LinkList links={links} />
     )
   }
 
   const renderSingleLink = (props) => {
     const { id } = props.match.params;
+    // links [ { id }, { id }]
+    const singleLink = links.find(link => link.id === id)
+
     return (
-      <SingleLink state={state} getSingleLink={getSingleLink} id={id} />
+      <SingleLink links={links} singleLink={singleLink} id={id} />
     )
   }
 

@@ -13,7 +13,7 @@ const App = () => {
         <Link to='/links'>All Links</Link>
       </nav>
 
-      <h2> 💯🔥🙏👌 Meme-ddit 👌🙏🔥💯 </h2>
+      <h2> Meme-ddit </h2>
 
       <Switch>
         <Route exact path='/' component={Home} />

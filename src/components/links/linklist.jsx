@@ -3,14 +3,11 @@ import { Link, Route } from 'react-router-dom';
 import SingleLink from './singlelink';
 
 class LinkList extends Component {
-  componentDidMount() {
-    this.props.getAllLinks();
-  }
-
+  
   render() {
-    const { state } = this.props;
+    const { links } = this.props; // this.props.links
 
-    const allList = state.allMemes.map((item) => {
+    const allList = links.map((item) => {
       return (
         <Link to={`/links/${item.id}`}>
           <li id={item.id}>

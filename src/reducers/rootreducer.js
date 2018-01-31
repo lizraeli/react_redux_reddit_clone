@@ -1,4 +1,6 @@
 import links from "./linksreducer";
 import { combineReducers } from "redux";
 
-export default combineReducers({ links });
+export default combineReducers({ 
+  links: links 
+});

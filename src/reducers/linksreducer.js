@@ -31,9 +31,10 @@ const defaultState = [
 
 export default (state = defaultState, action) => {
   switch (action.type) {
-    case "SET_MEMES":
-      return action.memes;
-
+    case "SET_LINKS":
+      return action.links;
+    case "ADD_LINK":
+      return [...state, action.link];
     default:
       return state;
   }
